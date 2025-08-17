@@ -99,6 +99,10 @@ public static class XmlRootCommand {
 		StringBuilder sb = new();
 
 		for(int i = 1; i < text.Length; i++) {
+			if(text[i] == '<') {
+				return string.Empty;
+			}
+
 			if(text[i] == '>') {
 				return sb.ToString();
 			}
