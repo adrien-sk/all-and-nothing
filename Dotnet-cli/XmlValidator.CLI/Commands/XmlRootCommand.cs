@@ -35,12 +35,13 @@ public static class XmlRootCommand {
 					return;
 				}
 
-				xml = File.ReadAllText(xml).Replace("\n", "").Replace("\r", "").Trim();
+				//	Read XML from file
+				xml = File.ReadAllText(xml).Replace("\n", "").Replace("\r", "");
 			}
 
 			//	Call Validation logic, and return result
 			Console.WriteLine(
-				ValidateXML(xml!) ?
+				ValidateXML(xml!.Trim()) ?
 					"Valid" :
 					"Invalid"
 			);
