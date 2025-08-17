@@ -35,7 +35,7 @@ public static class XmlRootCommand {
 					return;
 				}
 
-				xml = File.ReadAllText(xml).Replace("\n", "").Replace("\r", "");
+				xml = File.ReadAllText(xml).Replace("\n", "").Replace("\r", "").Trim();
 			}
 
 			//	Call Validation logic, and return result
